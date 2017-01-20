@@ -4,7 +4,7 @@
   "description": "Test de mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/hello.test.js"
+    "test": "mocha tests/exercice.mag.panier.js"
   },
   "repository": {
     "type": "git",
