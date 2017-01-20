@@ -1,0 +1,23 @@
+{
+  "name": "js_testing",
+  "version": "1.0.0",
+  "description": "Test de mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephBlondeau/JS-Testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephBlondeau/JS-Testing/issues"
+  },
+  "homepage": "https://github.com/StephBlondeau/JS-Testing#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
+  }
+}
