@@ -1,3 +1,18 @@
+let getUnique = (array) => {
+  let newArray = [];
+  let checker = {};
+
+  for (let i = 0; i < array.length; i++){
+    let item = array[i];
+    if(!checker[item]){
+      checker[item] = true;
+      newArray.push(item);
+    }
+  }
+
+  return newArray;
+}
+
 let summarizeBasket = (prices, products) => {
   if(!products || !products.length){
     return {
@@ -5,24 +20,24 @@ let summarizeBasket = (prices, products) => {
       countArticles :0,
       countProducts :0
     };
-  } else {
-    // Traitement du panier pour 1 produit
-    let price = 0;
+  }
+  // Traitement du panier pour plusieurs produits
+  let price = 0;
 
-    products.forEach(function(product) {
-        price += prices[product];
-    })
+  products.forEach(function(product) {
+      price += prices[product];
+  })
 
-    return {
-      prices : price,
-      countArticles : products.length,
-      countProducts : products.length
-    }; // Fin du return
-  }// Fin du else
+  return {
+    prices : price,
+    countArticles : products.length,
+    countProducts : getUnique(products).length
+  }; // Fin du return
 }// Fin de la fonction
 
 module.exports = {
-  summarizeBasket: summarizeBasket
+  summarizeBasket: summarizeBasket,
+  getUnique: getUnique
 };
 
 // let summarizeBasket = (prices, products) => {
